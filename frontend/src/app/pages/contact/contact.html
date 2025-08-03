@@ -1,0 +1,8 @@
+<h2>Kontakt</h2>
+<form (ngSubmit)="submit()" #contactForm="ngForm">
+  <input name="name" [(ngModel)]="form.name" placeholder="Name" required>
+  <input name="email" [(ngModel)]="form.email" placeholder="E-Mail" required>
+  <textarea name="message" [(ngModel)]="form.message" placeholder="Nachricht" required></textarea>
+  <button type="submit">Senden</button>
+</form>
+<p *ngIf="sent">Danke für Ihre Nachricht!</p>

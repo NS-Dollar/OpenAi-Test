@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav a.active {
+  font-weight: bold;
+}
+.mode {
+  margin-left: auto;
+}
+body.dark {
+  background: #111;
+  color: #eee;
+}
+body.dark .nav {
+  background: #222;
+}
