@@ -1,0 +1,20 @@
+import { Component, effect, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected darkMode = signal(false);
+  constructor() {
+    effect(() => {
+      document.body.classList.toggle('dark', this.darkMode());
+    });
+  }
+  toggleDarkMode() {
+    this.darkMode.set(!this.darkMode());
+  }
+}

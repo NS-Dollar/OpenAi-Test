@@ -1,0 +1,9 @@
+<nav class="nav">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Start</a>
+  <a routerLink="about" routerLinkActive="active">Über mich</a>
+  <a routerLink="services" routerLinkActive="active">Leistungen</a>
+  <a routerLink="contact" routerLinkActive="active">Kontakt</a>
+  <a routerLink="imprint" routerLinkActive="active">Impressum</a>
+  <button class="mode" (click)="toggleDarkMode()">{{ darkMode() ? 'Light' : 'Dark' }} Mode</button>
+</nav>
+<router-outlet></router-outlet>
